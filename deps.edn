@@ -1,4 +1,8 @@
-{:paths ["src"]
+{:paths [:clj-paths :resource-paths]
  :deps {com.cemerick/url {:mvn/version "0.1.1"}
         metosin/malli    {:mvn/version "0.2.1"}
-        wing/wing        {:mvn/version "0.1.4"}}}
+        wing/wing        {:mvn/version "0.1.4"}}
+ :aliases
+ {:clj-paths ["src"]
+  :resource-paths ["resources"]
+  :main {:jvm-opts ["-Dmalli.registry/type=custom"]}}}

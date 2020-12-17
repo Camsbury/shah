@@ -1,0 +1,67 @@
+{"a1" #{"white queenside rook"}
+ "a2" #{"white queenside rook pawn"}
+ "a3" #{"white queenside hook"}
+ "a4" #{"qga old variation killer"}
+ "a5" #{"black queenside space expander"}
+ "a6" #{"black queenside hook"
+        "benko gambit fully accepted"}
+ "a7" #{"black queenside rook pawn"}
+ "a8" #{"black queenside rook"}
+ "b1" #{"white queenside knight"}
+ "b2" #{"white queenside fianchetto"}
+ "b3" #{"white queenside fianchetto pawn"}
+ "b4" #{"pinning white's queenside knight with sith"}
+ "b5" #{"ruy lopez" "benko gambit" "qga: old variation"}
+ "b6" #{"QID fianchetto pawn"}
+ "b7" #{"QID jedi"}
+ "b8" #{"black queenside knight"}
+ "c1" #{"white sith" "white long-castled king"}
+ "c2" #{"fork white king and rook"}
+ "c3" #{"white queenside natural knight"}
+ "c4" #{"queen's gambit" "italian jedi" "english opening"}
+ "c5" #{"tarrasch defense" "giuoco piano sith" "symmetric english"
+        "benoni"}
+ "c6" #{"slav defense" "black queenside natural knight"
+        "caro kann"}
+ "c7" #{"fork black king and rook"}
+ "c8" #{"black jedi" "black long-castled king"}
+ "d1" #{"white queen" "white long-castled rook"}
+ "d2" #{"white queen pawn"}
+ "d3" #{"white jedi tall-pawn"}
+ "d4" #{"queen's pawn opening"}
+ "d5" #{"queen's pawn game response"}
+ "d6" #{"philidor" "indian center pawn"}
+ "d7" #{"black queen pawn"}
+ "d8" #{"black queen" "black long-castled rook"}
+ "e1" #{"white king"}
+ "e2" #{"white king pawn"}
+ "e3" #{"white sith tall-pawn"}
+ "e4" #{"most common first move"}
+ "e5" #{"king's pawn game response" "KID center push"}
+ "e6" #{"queen's gambit declined"}
+ "e7" #{"black king pawn"}
+ "e8" #{"black king"}
+ "f1" #{"white jedi" "white short-castled rook"}
+ "f2" #{"fork white queen and rook"}
+ "f3" #{"white kingside knight loves to be here" "Zuckertort"}
+ "f4" #{"white kingside attack pawn push" "bird's opening"}
+ "f5" #{"dutch defense"}
+ "f6" #{"indian defense" "pirc defense" "qgd: marshall defense"}
+ "f7" #{"scholar's mate" "fork black queen and rook"}
+ "f8" #{"black sith" "black short-castled rook"}
+ "g1" #{"white kingside knight" "white short-castled king"}
+ "g2" #{"catalan jedi"}
+ "g3" #{"catalan fianchetto pawn"}
+ "g4" #{"pinning white's kingside knight with jedi"}
+ "g5" #{"pinning black's kingside knight with sith"}
+ "g6" #{"KID fianchetto pawn"}
+ "g7" #{"KID sith"}
+ "g8" #{"black kingside knight" "black short-castled king"}
+ "h1" #{"white kingside rook"}
+ "h2" #{"white kingside rook pawn"}
+ "h3" #{"white kingside hook"}
+ "h4" #{"white kingside space expander"}
+ "h5" #{"wayward queen attack"}
+ "h6" #{"black kingside hook"}
+ "h7" #{"black kingside rook pawn"}
+ "h8" #{"black kingside rook"}}
