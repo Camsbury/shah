@@ -1,0 +1,4 @@
+{:paths ["src"]
+ :deps {com.cemerick/url {:mvn/version "0.1.1"}
+        metosin/malli    {:mvn/version "0.2.1"}
+        wing/wing        {:mvn/version "0.1.4"}}}
