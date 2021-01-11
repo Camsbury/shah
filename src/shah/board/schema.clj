@@ -1,26 +1,15 @@
 (ns shah.board.schema
-  (:require [malli.core :as m]
-            [shah.board.square.schema :as square]))
-
-(def PieceColor
-  [:and
-   {:title "PieceColor"
-    :description "The color of the chess piece"}
-   [:enum :white :black]])
-
-(def Piece
-  [:and
-   {:title "Piece"
-    :description "A chess piece"}
-   [:enum :pawn :knight :bishop :rook :queen :king]])
+  (:require
+   [shah.board.piece :as piece]
+   [shah.board.square :as square]))
 
 (def RankPlacement
   [:and
    [:vector
     [:maybe
      [:map
-      [:piece Piece]
-      [:color PieceColor]]]]
+      [:piece piece/Piece]
+      [:color piece/PieceColor]]]]
    [:fn #(= 8 (count %))]])
 
 (def PiecePlacement
@@ -44,7 +33,7 @@
     :description "Chessboard state isomorphic to FEN"}
    [:map
     [:piece-placement PiecePlacement]
-    [:active-color PieceColor]
+    [:active-color piece/PieceColor]
     [:castling-availability CastlingAvailability]
     [:halfmove-clock [:and int? [:>= 0]]]
     [:fullmove-number [:and int? [:> 0]]]

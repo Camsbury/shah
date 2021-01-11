@@ -3,7 +3,9 @@
    [clojure.java.io :as io]
    [clojure.string :as str]
    [clojure.edn :as edn]
-   [malli.transform :as mt]))
+   [malli.core :as m]
+   [malli.transform :as mt]
+   [shah.registry :as registry]))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -23,6 +25,8 @@
    [:tuple
     Coordinate
     Coordinate]])
+
+(registry/register! 'Square Square)
 
 (def AlNot
   [:and
@@ -52,7 +56,7 @@
 
 (def al-not-transformer
   (mt/transformer
-   {:name :al-not
+   {:name     :al-not
     :decoders {'Square -al-not->square}
     :encoders {'Square -square->al-not}}))
 
@@ -72,6 +76,11 @@
       slurp
       edn/read-string))
 
+(defn square->quadrant [[file rank]]
+  (let [color (if (> rank 3) :black :white)
+        side   (if (> file 3) :kingside :queenside)]
+    [side color]))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Generators
@@ -87,8 +96,7 @@
   (first (all-squares-shuffled)))
 
 (defn gen-al-not []
-  (-square->al-not (gen-square))
-  #_(m/encode Square (gen-square) al-not-transformer))
+  (-square->al-not (gen-square)))
 
 (defn cycle-al-nots []
   (let [state (atom (cycle (all-squares-shuffled)))]
@@ -103,4 +111,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (comment
+  (m/decode 'Square [6 0] al-not-transformer)
   (gen-al-not))

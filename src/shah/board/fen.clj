@@ -16,5 +16,5 @@
        browse/browse-url))
 
 (comment
-  (view-fen-on-lichess
-   "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3"))
+  (map view-fen-on-lichess []))
+

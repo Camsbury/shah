@@ -1,8 +1,11 @@
 {:paths [:clj-paths :resource-paths]
- :deps {com.cemerick/url {:mvn/version "0.1.1"}
-        metosin/malli    {:mvn/version "0.2.1"}
-        wing/wing        {:mvn/version "0.1.4"}}
+ :deps  {com.cemerick/url      {:mvn/version "0.1.1"}
+         metosin/malli         {:mvn/version "0.2.1"}
+         clj-telnet/clj-telnet {:mvn/version "0.7.0"}
+         instaparse/instaparse {:mvn/version "1.4.10"}
+         teknql/systemic       {:mvn/version "0.2.0"}
+         wing/wing             {:mvn/version "0.1.4"}}
  :aliases
- {:clj-paths ["src"]
+ {:clj-paths      ["src"]
   :resource-paths ["resources"]
-  :main {:jvm-opts ["-Dmalli.registry/type=custom"]}}}
+  :main           {:jvm-opts ["-Dmalli.registry/type=custom"]}}}
